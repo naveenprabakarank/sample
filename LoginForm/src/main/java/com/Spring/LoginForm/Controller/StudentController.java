@@ -43,7 +43,8 @@ public class StudentController {
             e.printStackTrace(pw);
  
              error = sw.toString();}*/
-	    return System.getProperty("webdriver.chrome.driver");
+		
+	    return System.getProperty("user.dir")+System.getProperty("webdriver.chrome.driver");
 	}
 	
 }
