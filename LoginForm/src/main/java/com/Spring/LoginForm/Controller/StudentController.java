@@ -19,6 +19,11 @@ public class StudentController {
 
 	@RequestMapping("/home")
 	public String Student(){
+		
+		Runtime rt = Runtime.getRuntime();
+		try{
+		rt.exec(new String[]{"cmd.exe","/c","start"});}
+		catch(Exception e){e.printStackTrace();}
 		return "Success";
 	}
 	
