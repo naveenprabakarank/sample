@@ -22,8 +22,8 @@ public class StudentController {
 	@RequestMapping("/home")
 	public String Student(){
 		String error=" ";
-		System.setProperty("webdriver.chrome.driver", "LoginForm/src/main/resources/chromedriver.exe");  
-		/*try{
+
+		try{
 	    // declaration and instantiation of objects/variables  
 	    System.setProperty("webdriver.chrome.driver", "LoginForm/src/main/resources/chromedriver.exe");  
 	    WebDriver driver=new ChromeDriver();  
@@ -42,9 +42,9 @@ public class StudentController {
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
  
-             error = sw.toString();}*/
+             error = sw.toString();}
 		
-	    return System.getProperty("user.dir")+System.getProperty("webdriver.chrome.driver");
+	    return error;
 	}
 	
 }
