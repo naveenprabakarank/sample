@@ -25,7 +25,8 @@ public class StudentController {
 
 		try{
 	    // declaration and instantiation of objects/variables  
-	    System.setProperty("webdriver.chrome.driver", "/LoginForm/chromedriver.exe");  
+	    String userdir=System.getProperty("user.dir");
+	    System.setProperty("webdriver.chrome.driver", userdir+"/LoginForm/chromedriver.exe");  
 	    WebDriver driver=new ChromeDriver();  
 
 	    // Launch website  
