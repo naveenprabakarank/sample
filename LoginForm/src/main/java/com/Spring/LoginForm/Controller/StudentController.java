@@ -21,6 +21,8 @@ public class StudentController {
 
 	@RequestMapping("/home")
 	public String Student(){
+		String error=" ";
+		try{
 	    // declaration and instantiation of objects/variables  
 	    System.setProperty("webdriver.chrome.driver", "LoginForm/src/main/resources/chromedriver.exe");  
 	    WebDriver driver=new ChromeDriver();  
@@ -32,8 +34,15 @@ public class StudentController {
 	    driver.findElement(By.id("lst-ib")).sendKeys("javatpoint tutorials");  
 
 	    // Click on the search button  
-	    driver.findElement(By.name("btnK")).click();  
-	    return "sucess";
+	    driver.findElement(By.name("btnK")).click();  }
+		catch(Exception e){StringWriter sw = new StringWriter();
+ 
+            // create a PrintWriter
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+ 
+             error = sw.toString();}
+	    return error;
 	}
 	
 }
