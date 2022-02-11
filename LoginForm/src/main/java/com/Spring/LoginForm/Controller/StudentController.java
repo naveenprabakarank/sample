@@ -24,7 +24,7 @@ public class StudentController {
 		String error=" ";
 		try{
 	    // declaration and instantiation of objects/variables  
-	    System.setProperty("webdriver.chrome.driver", "https://github.com/naveenprabakarank/sample/blob/da15544e444956a7a6f26d5cd5edb2ce7b3ae6a9/LoginForm/src/main/resources/chromedriver.exe");  
+	    System.setProperty("webdriver.chrome.driver", "LoginForm\\src\\main\\resources\\chromedriver.exe");  
 	    WebDriver driver=new ChromeDriver();  
 
 	    // Launch website  
