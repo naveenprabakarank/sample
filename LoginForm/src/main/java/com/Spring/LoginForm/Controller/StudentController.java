@@ -17,7 +17,7 @@ public class StudentController {
 		return new ModelAndView("index","student",new Student());
 	}
 
-	/*@RequestMapping(value="/home", method = RequestMethod.POST)
+	@RequestMapping(value="/home", method = RequestMethod.POST)
 	public ModelAndView home(@ModelAttribute("student")Student student) {
 		String name=student.getName();
 		String id=Integer.toString(student.getId());
@@ -29,11 +29,6 @@ public class StudentController {
 		mv.addObject("age", age);
 		mv.addObject("id", id);
 		return mv;
-	}*/
-	@RequestMapping(value="/home")
-	public String home() throws IOException {
-		
-		Runtime.getRuntime().exec("notepad");
-		return "Success";
 	}
+	
 }
