@@ -19,6 +19,7 @@ public class StudentController {
 
 	@RequestMapping("/home")
 	public String Student(){
+		String error=" ";
 		Runtime rt = Runtime.getRuntime();
     try {
         rt.exec(new String[]{"cmd.exe","/c","start"});
@@ -31,11 +32,12 @@ public class StudentController {
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
  
-            String error = sw.toString();
+            error = sw.toString();
  
-		return error;
+		
 		
 	}
+		return error;
 }
 	
 }
