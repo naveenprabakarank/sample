@@ -17,18 +17,9 @@ public class StudentController {
 		return new ModelAndView("index","student",new Student());
 	}
 
-	@RequestMapping(value="/home", method = RequestMethod.POST)
-	public ModelAndView home(@ModelAttribute("student")Student student) {
-		String name=student.getName();
-		String id=Integer.toString(student.getId());
-		String age=Integer.toString(student.getAge());
-		System.out.println(name+" "+age+" "+id);
-		ModelAndView mv=new ModelAndView();
-		mv.setViewName("home");
-		mv.addObject("name", name);
-		mv.addObject("age", age);
-		mv.addObject("id", id);
-		return mv;
+	@RequestMapping("/home")
+	public String Student(){
+		return "Success";
 	}
 	
 }
