@@ -1,7 +1,7 @@
 package com.Spring.LoginForm.Controller;
 
 import java.io.IOException;
-
+import java.io.*;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,12 +19,23 @@ public class StudentController {
 
 	@RequestMapping("/home")
 	public String Student(){
-		
 		Runtime rt = Runtime.getRuntime();
-		try{
-		rt.exec(new String[]{"cmd.exe","/c","start"});}
-		catch(Exception e){e.printStackTrace();}
-		return "Success";
+    try {
+        rt.exec(new String[]{"cmd.exe","/c","start"});
+
+    } catch (IOException e) {
+		
+		StringWriter sw = new StringWriter();
+ 
+            // create a PrintWriter
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+ 
+            String error = sw.toString();
+ 
+		return error;
+		
 	}
+}
 	
 }
