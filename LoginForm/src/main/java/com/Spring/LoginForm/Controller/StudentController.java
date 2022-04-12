@@ -41,7 +41,7 @@ public class StudentController {
 			op=driver.getTitle();
 		  System.out.println("Page title is: " + driver.getTitle());		
 
-		  driver.quit();}
+		  driver.quit();
 		
 		return op;
 		
