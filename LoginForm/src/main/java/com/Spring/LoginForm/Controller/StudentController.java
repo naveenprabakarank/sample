@@ -25,22 +25,20 @@ public class StudentController {
 	}
 
 	@RequestMapping("/home")
-	public String Student(){
+	public String Student() throws Exception{
 		
 		String error="";
 		String op="";
 		
-		try{
+		
 		
 		HtmlUnitDriver driver = new HtmlUnitDriver();
         
 			     // Navigate to Google		
 		   driver.get("http://www.google.com");					
 
-		}
-		catch(Exception e){
-			op=e.toString();
-		}
+		
+		
 		
 		return op;
 		
