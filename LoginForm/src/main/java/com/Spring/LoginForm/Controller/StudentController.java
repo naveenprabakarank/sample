@@ -20,10 +20,10 @@ import com.Spring.LoginForm.Beans.Student;
 public class StudentController {
 	@RequestMapping("/")
 	public ModelAndView student() {
-		return new ModelAndView("index","student",new Student());
+		return new ModelAndView("index");
 	}
 
-	@RequestMapping("/home")
+	@RequestMapping("/index")
 	public String Student(){
 		WebDriver driver = new HtmlUnitDriver();
         
