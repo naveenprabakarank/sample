@@ -32,8 +32,8 @@ public class StudentController {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
-        	String title = driver.getTitle();
-		return title;
+       
+		return "Success";
 		
 	}	
 		
