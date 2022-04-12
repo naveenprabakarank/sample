@@ -26,22 +26,12 @@ public class StudentController {
 
 	@RequestMapping("/home")
 	public String Student() throws Exception{
-		
-		String error="";
-		String op="";
-		
-		
-		
-		HtmlUnitDriver driver = new HtmlUnitDriver();
-        
-			     // Navigate to Google		
-		   driver.get("http://www.google.com");					
-
-		
-		
-		
-		return op;
-		
+		WebDriver driver;
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+        	String title = driver.getTitle();
+		return title;
 		
 	}	
 		
