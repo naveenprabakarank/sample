@@ -28,7 +28,7 @@ public class StudentController {
 		
 		String error="";
 		String op="";
-		try{
+		
 		WebDriver driver = new HtmlUnitDriver();
         
 			     // Navigate to Google		
@@ -42,12 +42,9 @@ public class StudentController {
 		  System.out.println("Page title is: " + driver.getTitle());		
 
 		  driver.quit();}
-		catch(Exception e){
-			error=e.toString();
-		}
-		finally{
-			return op;
-		}
+		
+		return op;
+		
 		
 	}	
 		
