@@ -35,7 +35,9 @@ public class StudentController {
 
 			 // Locate the searchbox using its name		
 		
-			// This code will print the page title		
+			
+			// This code will print the page title	
+			String op=driver.getTitle();
 		  System.out.println("Page title is: " + driver.getTitle());		
 
 		  driver.quit();}
@@ -43,7 +45,7 @@ public class StudentController {
 			error=e.toString();
 		}
 		finally{
-			return error;
+			return op;
 		}
 		
 	}	
