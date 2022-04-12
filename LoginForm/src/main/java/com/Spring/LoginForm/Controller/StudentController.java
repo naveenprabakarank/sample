@@ -20,7 +20,7 @@ import com.Spring.LoginForm.Beans.Student;
 public class StudentController {
 	@RequestMapping("/")
 	public ModelAndView student() {
-		return new ModelAndView("index",new student(),"student");
+		return new ModelAndView("index","student",new student());
 	}
 
 	@RequestMapping("/home")
