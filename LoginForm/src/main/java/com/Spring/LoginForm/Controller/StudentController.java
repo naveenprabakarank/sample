@@ -28,13 +28,14 @@ public class StudentController {
 	}
 
 	@RequestMapping("/home")
-	public String Student() throws Exception{
+	public ModelAndView Student() throws Exception{
 		
 		WebDriver driver = new HtmlUnitDriver();
 		driver.get("https://google.com");
-		
+		driver.quit();
+	
        
-		return "Success";
+		return new ModelAndView("home");
 		
 	}	
 		
