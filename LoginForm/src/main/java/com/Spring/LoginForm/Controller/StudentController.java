@@ -31,8 +31,7 @@ public class StudentController {
 	public ModelAndView Student() throws Exception{
 		
 		WebDriver driver = new HtmlUnitDriver();
-		driver.get("https://google.com");
-		driver.quit();
+		
 	
        
 		return new ModelAndView("home");
