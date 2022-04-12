@@ -27,6 +27,7 @@ public class StudentController {
 	public String Student(){
 		
 		String error="";
+		String op="";
 		try{
 		WebDriver driver = new HtmlUnitDriver();
         
@@ -37,7 +38,7 @@ public class StudentController {
 		
 			
 			// This code will print the page title	
-			String op=driver.getTitle();
+			op=driver.getTitle();
 		  System.out.println("Page title is: " + driver.getTitle());		
 
 		  driver.quit();}
