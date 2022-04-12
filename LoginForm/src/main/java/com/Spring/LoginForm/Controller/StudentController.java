@@ -30,8 +30,6 @@ public class StudentController {
 	@RequestMapping("/home")
 	public ModelAndView Student() throws Exception{
 		
-		WebDriver driver = new HtmlUnitDriver();
-		
 	
        
 		return new ModelAndView("home");
