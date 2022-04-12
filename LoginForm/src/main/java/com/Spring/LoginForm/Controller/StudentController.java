@@ -32,7 +32,7 @@ public class StudentController {
 		WebDriver driver;
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("https://google.com");
+		
        
 		return "Success";
 		
