@@ -29,14 +29,19 @@ public class StudentController {
 		String error="";
 		String op="";
 		
+		try{
+		
 		HtmlUnitDriver driver = new HtmlUnitDriver();
         
 			     // Navigate to Google		
 		   driver.get("http://www.google.com");					
 
-			
+		}
+		catch(Exception e){
+			op=e.toString();
+		}
 		
-		return "Success";
+		return op;
 		
 		
 	}	
