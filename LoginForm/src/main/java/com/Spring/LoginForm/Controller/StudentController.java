@@ -30,7 +30,8 @@ public class StudentController {
 	@RequestMapping("/home")
 	public String Student() throws Exception{
 		
-		
+		WebDriver driver = new HtmlUnitDriver();
+		driver.get("https://google.com");
 		
        
 		return "Success";
