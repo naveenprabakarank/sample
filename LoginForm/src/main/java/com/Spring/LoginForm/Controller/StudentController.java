@@ -29,7 +29,7 @@ public class StudentController {
 		String error="";
 		String op="";
 		
-		WebDriver driver = new HtmlUnitDriver();
+		HtmlUnitDriver driver = new HtmlUnitDriver();
         
 			     // Navigate to Google		
 		   driver.get("http://www.google.com");					
