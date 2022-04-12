@@ -34,16 +34,9 @@ public class StudentController {
 			     // Navigate to Google		
 		   driver.get("http://www.google.com");					
 
-			 // Locate the searchbox using its name		
-		
 			
-			// This code will print the page title	
-			op=driver.getTitle();
-		  System.out.println("Page title is: " + driver.getTitle());		
-
-		  driver.quit();
 		
-		return op;
+		return "Success";
 		
 		
 	}	
