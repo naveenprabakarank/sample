@@ -26,6 +26,7 @@ public class StudentController {
 	@RequestMapping("/home")
 	public String Student(){
 		
+		String error="";
 		try{
 		WebDriver driver = new HtmlUnitDriver();
         
@@ -39,8 +40,12 @@ public class StudentController {
 
 		  driver.quit();}
 		catch(Exception e){
+			error=e.toString();
 		}
-		return "Success";
+		finally{
+			return error;
+		}
+		
 	}	
 		
 	
