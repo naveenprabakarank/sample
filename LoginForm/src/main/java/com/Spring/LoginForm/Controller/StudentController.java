@@ -30,8 +30,8 @@ public class StudentController {
 	public String Student() throws Exception{
 		
 		WebDriver driver;
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();
 		
        
 		return "Success";
