@@ -21,31 +21,27 @@ public class StudentController {
 
 	@RequestMapping("/home")
 	public String Student(){
-		String error=" ";
+		WebDriver driver = new HtmlUnitDriver();
+        
+			     // Navigate to Google		
+		   driver.get("http://www.google.com");					
 
-		try{
-	    // declaration and instantiation of objects/variables  
-	    String userdir=System.getProperty("user.dir")+"LoginForm/chromedriver.exe";
-	    System.setProperty("webdriver.chrome.driver", userdir);  
-	    WebDriver driver=new ChromeDriver();  
+			 // Locate the searchbox using its name		
+		   WebElement element = driver.findElement(By.name("q"));	
 
-	    // Launch website  
-	    driver.navigate().to("http://www.google.com/");  
+		  // Enter a search query		
+		  element.sendKeys("Guru99");	
 
-	    // Click on the search text box and send value  
-	    driver.findElement(By.id("lst-ib")).sendKeys("javatpoint tutorials");  
+		  // Submit the query. Webdriver searches for the form using the text input element automatically		
+		  // No need to locate/find the submit button		
+		  element.submit();			
 
-	    // Click on the search button  
-	    driver.findElement(By.name("btnK")).click();  }
-		catch(Exception e){StringWriter sw = new StringWriter();
- 
-            // create a PrintWriter
-            PrintWriter pw = new PrintWriter(sw);
-            e.printStackTrace(pw);
- 
-             error = sw.toString();}
+			// This code will print the page title		
+		  System.out.println("Page title is: " + driver.getTitle());		
+
+		  driver.quit();
+		return "Success";
 		
-	    return error;
-	}
+		
 	
 }
