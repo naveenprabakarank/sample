@@ -30,9 +30,7 @@ public class StudentController {
 	@RequestMapping("/home")
 	public String Student() throws Exception{
 		
-		WebDriver driver;
-		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+		
 		
        
 		return "Success";
