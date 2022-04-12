@@ -38,7 +38,7 @@ public class StudentController {
 		   driver.get("http://www.google.com");					
 
 		}
-		catch(IOException e){
+		catch(Exception e){
 			op=e.toString();
 		}
 		
