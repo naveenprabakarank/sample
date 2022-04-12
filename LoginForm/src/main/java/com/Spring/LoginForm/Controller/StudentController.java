@@ -29,6 +29,10 @@ public class StudentController {
 	@RequestMapping("/home")
 	public String Student() throws Exception{
 		
+		WebDriver driver;
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://google.com");
        
 		return "Success";
 		
